@@ -1,11 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Реєстрація</title>
+  <link rel="stylesheet" href="style/style.css"> 
 </head>
+
 <body>
+
+  <header>
+    <h1>Реєстрація</h1>
+  </header>
+
+  <main>
+    <div class="registration-options">
+      <button id="user-registration-btn">Реєстрація користувача</button>
+      <button id="business-registration-btn">Реєстрація бізнесу</button>
+    </div>
+
+    <form id="user-registration-form" action="process_user_registration.php" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="first-name">Ім'я:</label>
+        <input type="text" id="first-name" name="first-name" required>
+      </div>
+      <div class="form-group">
+        <label for="last-name">Прізвище:</label>
+        <input type="text" id="last-name" name="last-name" required>
+      </div>
+      <div class="form-group">
+        <label for="username">Логін:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Номер:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Стать:</label>
+        <select id="gender" name="gender" required>
+          <option value="male">Чоловіча</option>
+          <option value="female">Жіноча</option>
+          <option value="other">Інше</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Повторіть пароль:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+      </div>
+      <div class="form-group">
+        <label for="photo">Фото:</label>
+        <input type="file" id="photo" name="photo">
+      </div>
+      <button type="submit">Зареєструвати користувача</button>
+    </form>
+
+    <form id="business-registration-form" action="process_business_registration.php" method="POST" enctype="multipart/form-data" style="display: none;">
     
+      <div class="form-group">
+        <label for="business-name">Назва:</label>
+        <input type="text" id="business-name" name="business-name" required>
+      </div>
+      <div class="form-group">
+        <label for="business-email">Email:</label>
+        <input type="email" id="business-email" name="business-email" required>
+      </div>
+      <div class="form-group">
+        <label for="business-phone">Номер:</label>
+        <input type="tel" id="business-phone" name="business-phone" required>
+      </div>
+      <div class="form-group">
+        <label for="business-password">Пароль:</label>
+        <input type="password" id="business-password" name="business-password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirm-business-password">Повторіть пароль:</label>
+        <input type="password" id="confirm-business-password" name="confirm-business-password" required>
+      </div>
+      <div class="form-group">
+        <label for="business-photo">Фото бізнесу:</label>
+        <input type="file" id="business-photo" name="business-photo">
+      </div>
+      <button type="submit">Зареєструвати бізнес</button>
+    </form>
+  </main>
+
+  <script>
+    const userRegistrationBtn = document.getElementById('user-registration-btn');
+    const businessRegistrationBtn = document.getElementById('business-registration-btn');
+    const userRegistrationForm = document.getElementById('user-registration-form');
+    const businessRegistrationForm = document.getElementById('business-registration-form');
+
+    userRegistrationBtn.addEventListener('click', () => {
+      userRegistrationForm.style.display = 'block';
+      businessRegistrationForm.style.display = 'none';
+    });
+
+    businessRegistrationBtn.addEventListener('click', () => {
+      userRegistrationForm.style.display = 'none';
+      businessRegistrationForm.style.display = 'block';
+    });
+  </script>
+
 </body>
+
 </html>
+
+  <footer>
+    <p>&copy; 2024 Всі права захищені.</p>
+  </footer>
