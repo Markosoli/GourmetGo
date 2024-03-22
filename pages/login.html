@@ -3,9 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Увійти на сайт</title>
+
+    <header>    
+        <img src="jpg/photo_2024-03-10_11-44-46.jpg" type="submit" href="index.html" alt="Фото страви" class="rounded" style="width: 75px;">   
+    </header>  
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <h2>Увійти на сайт</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Ім'я користувача:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn">Увійти</button>
+        </form>
+        <div id="businessLink">
+            <p>Ви є бізнес-користувачем? <a href="logbiznes.html" onclick="switchToBusiness()">Увійти в бізнес-акаунт</a></p>
+        </div>
+    </div>
+
+    <script>
+        function switchToBusiness() {
+            // Редірект на сторінку бізнес-акаунту
+            window.location.href = 'business-login.html';
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Додатковий код для обробки входу користувача
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+            console.log('Вхід для користувача з ім\'ям', username, 'і паролем', password);
+            // Тут можна виконати AJAX-запит для перевірки даних та входу
+        });
+    </script>
 </body>
 </html>
