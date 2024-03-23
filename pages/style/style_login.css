@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Колір фону сайту */
+}
+
+header {
+    background-color: #ff8c00; /* Колір фону шапки */
+    color: #fff; /* Колір тексту у шапці */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    margin-top: 100px; /* Відступ зверху для контейнера форми входу */
+}
+
+.container-login {
+    background-color: #fff; /* Колір фону контейнера форми */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Тінь */
+    display: inline-block;
+}
+
+h2 {
+    margin-top: 0;
+    color: #333; /* Колір заголовка форми входу */
+}
+
+form {
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
