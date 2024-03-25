@@ -1,60 +1,83 @@
-body {
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Колір фону сайту */
+    box-sizing: border-box;
 }
 
-header {
-    background-color: #ff8c00; /* Колір фону шапки */
-    color: #fff; /* Колір тексту у шапці */
-    padding: 20px 0;
-    text-align: center;
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    position: relative;
-    text-align: center;
-    margin-top: 100px; /* Відступ зверху для контейнера форми входу */
-}
-
-.container-login {
-    background-color: #fff; /* Колір фону контейнера форми */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Тінь */
-    display: inline-block;
-}
-
-h2 {
-    margin-top: 0;
-    color: #333; /* Колір заголовка форми входу */
-}
-
-form {
-    text-align: left;
-    max-width: 300px;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
 }
 
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.top-bar {
+    background-color: #ff7f00; /* Оранжевий колір */
+    padding: 10px 0;
 }
 
-button {
-    background-color: #333;
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    font-size: 16px;
+    color: #fff; /* Білий колір */
+    margin-right: auto; /* Позиціонування контактної інформації зліва */
+}
+
+.contact-info p {
+    margin-bottom: 5px;
+}
+
+.logo {
+    font-size: 24px;
+    color: #fff; /* Білий колір */
+    margin: 0;
+}
+
+.main-nav {
+    margin-left: auto;
+}
+
+.main-nav .btn {
+    background-color: #ff8c00; /* Темно-помаранчевий колір */
     color: #fff;
-    border: none;
-    border-radius: 5px;
     padding: 10px 20px;
-    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #555;
+.main-nav .btn:hover {
+    background-color: #ff4500; /* Світло-помаранчевий колір при наведенні */
+}
+
+.about-section {
+    text-align: left; /* Текст вирівнюється зліва */
+    padding: 50px 20px; /* Збільшення відступів для кращого читання */
+}
+
+.about-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff4500; /* Світло-помаранчевий колір */
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 30px;
 }

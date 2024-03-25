@@ -72,27 +72,32 @@ section p {
     text-align: right;
 }
 
-.forms form {
-    margin-bottom: 10px;
+.forms li {
+    display: inline-block;
+    margin-right: 10px;
 }
 
-.forms input[type="text"],
-.forms input[type="password"] {
-    width: 150px;
-    padding: 5px;
-    margin-right: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+.forms li:last-child {
+    margin-right: 0;
 }
 
-.forms input[type="submit"] {
+.forms a {
+    display: inline-block;
+    padding: 10px 20px;
     background-color: #333;
     color: #fff;
-    border: none;
-    border-radius: 3px;
-    padding: 5px 10px;
-    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
+
+.forms a:hover {
+    background-color: #666;
+}
+
+
+
+
 
 footer {
     background-color: #333;
@@ -105,4 +110,14 @@ footer {
 }
 
 
+.rounded-img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Тінь */
+    z-index: 1000; /* Високий індекс для перекриття іншого вмісту */
+}
 

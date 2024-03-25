@@ -1,0 +1,160 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+ top-bar {
+    background-color: #ff7f00; /* Оранжевий колір */
+    padding: 10px 0;
+    border-top: 4px solid #ffa500; /* Такий же колір, як на індексі */
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    font-size: 16px;
+    color: #fff; /* Білий колір */
+    margin-right: auto; /* Позиціонування контактної інформації зліва */
+}
+
+.contact-info p {
+    margin-bottom: 5px;
+}
+
+.logo {
+    font-size: 24px;
+    color: #fff; /* Білий колір */
+    margin: 0;
+}
+
+.main-nav {
+    margin-left: auto;
+}
+
+.main-nav .btn {
+    background-color: #ff8c00; /* Темно-помаранчевий колір */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav .btn:hover {
+    background-color: #ff4500; /* Світло-помаранчевий колір при наведенні */
+}
+
+.about-section {
+    text-align: left; /* Текст вирівнюється зліва */
+    padding: 50px 20px; /* Збільшення відступів для кращого читання */
+}
+
+.about-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff4500; /* Світло-помаранчевий колір */
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+   padding: 20px;
+}
+
+.top-bar {
+    background-color: #ff7f00; /* Оранжевий колір */
+    padding: 10px 0;
+    border-top: 4px solid #ffa500; /* Такий же колір, як на індексі */
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    font-size: 16px;
+    color: #fff; /* Білий колір */
+    margin-right: auto; /* Позиціонування контактної інформації зліва */
+}
+
+.contact-info p {
+    margin-bottom: 5px;
+}
+
+.logo {
+    font-size: 24px;
+    color: #fff; /* Білий колір */
+    margin: 0;
+}
+
+.main-nav {
+    margin-left: auto;
+}
+
+.main-nav .btn {
+    background-color: #ff8c00; /* Темно-помаранчевий колір */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav .btn:hover {
+    background-color: #ff4500; /* Світло-помаранчевий колір при наведенні */
+}
+
+.about-section {
+    text-align: left; /* Текст вирівнюється зліва */
+    padding: 50px 20px; /* Збільшення відступів для кращого читання */
+}
+
+.about-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff4500; /* Світло-помаранчевий колір */
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+
+.rounded-img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Тінь */
+    z-index: 1000; /* Високий індекс для перекриття іншого вмісту */
+}
