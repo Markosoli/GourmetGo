@@ -8,76 +8,110 @@
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center; /* Розміщує всі елементи по центру горизонтально */
+    align-items: center; /* Розміщує всі елементи по центру вертикально */
+    height: 100vh; /* Займає весь видимий розмір висоти */
+}
+
+header {
+    background-color: #ff8c00;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%; /* Розтягнути шапку на всю ширину */
+    position: fixed; /* Зробити шапку фіксованою */
+    top: 0; /* Позиціонувати зверху */
+    z-index: 1000; /* Забезпечити, щоб шапка була найвищим шаром */
+}
+
+header h1 {
     margin: 0;
-    padding: 0;
+    color: #fff;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
     padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 80px; /* Відстань від верхньої кромки шапки */
 }
 
-.top-bar {
-    background-color: #ff7f00; /* Оранжевий колір */
-    padding: 10px 0;
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.top-bar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.form-group {
+    margin-bottom: 15px; /* Зменшив міжрядковий відступ */
 }
 
-.contact-info {
-    font-size: 16px;
-    color: #fff; /* Білий колір */
-    margin-right: auto; /* Позиціонування контактної інформації зліва */
-}
-
-.contact-info p {
+.form-group label {
+    display: block;
     margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
 }
 
-.logo {
-    font-size: 24px;
-    color: #fff; /* Білий колір */
-    margin: 0;
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: calc(100% - 20px); /* Зменшив ширину полів для вводу */
+    padding: 8px; /* Зменшив внутрішній відступ */
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
 }
 
-.main-nav {
-    margin-left: auto;
+.form-group input:focus,
+.form-group input[type="password"]:focus {
+    outline: none;
+    border-color: #ff8c00;
 }
 
-.main-nav .btn {
-    background-color: #ff8c00; /* Темно-помаранчевий колір */
+button[type="submit"] {
+    background-color: #333;
     color: #fff;
-    padding: 10px 20px;
     border: none;
-    border-radius: 3px;
-    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.main-nav .btn:hover {
-    background-color: #ff4500; /* Світло-помаранчевий колір при наведенні */
+button[type="submit"]:hover {
+    background-color: #555;
 }
 
-.about-section {
-    text-align: left; /* Текст вирівнюється зліва */
-    padding: 50px 20px; /* Збільшення відступів для кращого читання */
+#businessLink {
+    text-align: center;
+    margin-top: 20px;
 }
 
-.about-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #ff4500; /* Світло-помаранчевий колір */
+#businessLink p {
+    font-size: 14px;
 }
 
-.about-section p {
-    font-size: 18px;
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 30px;
+#businessLink a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#businessLink a:hover {
+    text-decoration: underline;
+}
+
+.rounded-img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Тінь */
+    z-index: 1000; /* Високий індекс для перекриття іншого вмісту */
 }
